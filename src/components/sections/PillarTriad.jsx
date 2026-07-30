@@ -19,7 +19,7 @@ const TINTS = ["#0F766A", "#0F766A", "#0F766A"];
 export function PillarTriad() {
   return (
     <Section labelledBy="pillars-heading">
-      <SectionHeader number="04" eyebrow="What we do" />
+      <SectionHeader eyebrow="What we do" />
 
       <div className="mt-10 md:mt-14">
         <ConnectorMark size={64} color="#0B0C0E" tint={TINTS} className="opacity-90" />

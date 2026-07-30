@@ -14,7 +14,7 @@ import { Measure } from "../primitives/Measure";
 // and the highlight are both removed.
 const NARROW = "(max-width: 767px)";
 
-export function PillarDetail({ pillar, number }) {
+export function PillarDetail({ pillar }) {
   const [lit, setLit] = useState(0);
   const [isNarrow, setIsNarrow] = useState(() => window.matchMedia(NARROW).matches);
   const listRef = useRef(null);
@@ -63,7 +63,7 @@ export function PillarDetail({ pillar, number }) {
           <div className="md:col-span-4">
             <div className="md:sticky md:top-sticky-top">
               <p className="font-mono text-mono-sm text-text-muted">
-                {number} — {pillar.title}
+                {pillar.number} — {pillar.title}
               </p>
               <h2
                 id={`${pillar.id}-heading`}

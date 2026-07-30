@@ -29,7 +29,7 @@ const BLOCKS = [
 export function WhyUs() {
   return (
     <Section labelledBy="why-heading">
-      <SectionHeader number="07" eyebrow="Why Modelly" />
+      <SectionHeader eyebrow="Why Modelly" />
 
       <MaskReveal
         id="why-heading"

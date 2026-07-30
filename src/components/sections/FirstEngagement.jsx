@@ -13,7 +13,7 @@ import { FIRST_ENGAGEMENT } from "../../content/engagementFormats";
 export function FirstEngagement() {
   return (
     <Section labelledBy="first-heading">
-      <SectionHeader number="06" total="07" eyebrow="Where most clients start" />
+      <SectionHeader eyebrow="Where most clients start" />
 
       <MaskReveal
         id="first-heading"

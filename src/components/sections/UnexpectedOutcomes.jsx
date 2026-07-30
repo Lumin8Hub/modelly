@@ -10,7 +10,7 @@ import { UNEXPECTED_OUTCOMES } from "../../content/caseStudies";
 export function UnexpectedOutcomes() {
   return (
     <Section labelledBy="unexpected-heading" theme="paper-2">
-      <SectionHeader number="03" total="04" eyebrow="What clients tell us" />
+      <SectionHeader eyebrow="What clients tell us" />
 
       <MaskReveal
         id="unexpected-heading"

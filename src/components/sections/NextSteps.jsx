@@ -25,7 +25,7 @@ const STEPS = [
 export function NextSteps() {
   return (
     <Section labelledBy="next-heading" theme="paper-2">
-      <SectionHeader number="02" total="02" eyebrow="What happens next" />
+      <SectionHeader eyebrow="What happens next" />
 
       <MaskReveal
         id="next-heading"

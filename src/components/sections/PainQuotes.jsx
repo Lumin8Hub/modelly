@@ -12,7 +12,7 @@ import { PAIN_QUOTES } from "../../content/painQuotes";
 export function PainQuotes() {
   return (
     <Section labelledBy="pain-heading">
-      <SectionHeader number="03" eyebrow="What we get called about" />
+      <SectionHeader eyebrow="What we get called about" />
 
       <MaskReveal
         id="pain-heading"

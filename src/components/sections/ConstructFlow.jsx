@@ -45,7 +45,7 @@ export function ConstructFlow() {
   return (
     <Section labelledBy="construct-heading">
       <div ref={sectionRef}>
-        <SectionHeader number="04" total="06" eyebrow="How the work runs" />
+        <SectionHeader eyebrow="How the work runs" />
 
         <MaskReveal
           id="construct-heading"

@@ -4,21 +4,20 @@ import { MaskReveal } from "../primitives/MaskReveal";
 import { Measure } from "../primitives/Measure";
 import { SectionHeader } from "../primitives/SectionHeader";
 
-// Copy deck §1.9. Used on the homepage as section 09 and reused verbatim at the
-// foot of /services, /approach, /results and /team with the counter dropped.
-// One closing action, worded identically everywhere, is the point — do not write
-// page-specific variants.
+// Copy deck §1.9. Closes the homepage and is reused verbatim at the foot of
+// /services, /approach, /results and /team. One closing action, worded
+// identically everywhere, is the point — do not write page-specific variants.
 //
 // No hello@modelly.ca here. The mailbox does not exist yet (07 B2), and a dead
 // primary CTA on a credibility site is the worst available outcome.
-export function CtaBand({ number }) {
+export function CtaBand() {
   return (
     <section
       aria-labelledby="cta-heading"
       className="on-ink bg-ink py-16 text-text-inv md:py-28"
     >
       <div className="mx-auto max-w-container px-6 md:px-12">
-        <SectionHeader number={number} eyebrow="Start here" theme="dark" />
+        <SectionHeader eyebrow="Start here" theme="dark" />
 
         <MaskReveal
           id="cta-heading"

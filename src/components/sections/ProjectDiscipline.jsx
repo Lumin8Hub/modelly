@@ -13,7 +13,7 @@ import { PROJECT_DISCIPLINE } from "../../content/fundamentals";
 export function ProjectDiscipline() {
   return (
     <Section labelledBy="discipline-heading" theme="paper-2">
-      <SectionHeader number="05" total="06" eyebrow="Keeping the work honest" />
+      <SectionHeader eyebrow="Keeping the work honest" />
 
       <MaskReveal
         id="discipline-heading"

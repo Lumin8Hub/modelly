@@ -125,7 +125,7 @@ export function RatioFlip() {
       className="on-ink bg-ink py-16 text-text-inv md:py-28"
     >
       <div className="mx-auto max-w-container px-6 md:px-12">
-        <SectionHeader number="02" eyebrow="The ratio" theme="dark" />
+        <SectionHeader eyebrow="The ratio" theme="dark" />
 
         <MaskReveal
           id="ratio-heading"

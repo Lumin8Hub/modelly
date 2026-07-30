@@ -18,7 +18,7 @@ import { AI_LAYER_EXPANDED, DELIVERY_LAYERS } from "../../content/fundamentals";
 export function DeliveryLayers() {
   return (
     <Section labelledBy="layers-heading">
-      <SectionHeader number="02" total="06" eyebrow="The four layers" />
+      <SectionHeader eyebrow="The four layers" />
 
       <MaskReveal
         id="layers-heading"

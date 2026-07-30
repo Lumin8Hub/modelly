@@ -12,7 +12,7 @@ import { PRINCIPALS } from "../../content/principals";
 export function PrincipalCards() {
   return (
     <Section labelledBy="principals-heading">
-      <SectionHeader number="02" total="04" eyebrow="Who we are" />
+      <SectionHeader eyebrow="Who we are" />
 
       <h2 id="principals-heading" className="sr-only">
         The three principals

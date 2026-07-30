@@ -14,7 +14,7 @@ import { FUNDAMENTALS } from "../../content/fundamentals";
 export function FundamentalsGrid() {
   return (
     <Section labelledBy="fundamentals-heading" theme="paper-2">
-      <SectionHeader number="03" total="06" eyebrow="The five fundamentals" />
+      <SectionHeader eyebrow="The five fundamentals" />
 
       <MaskReveal
         id="fundamentals-heading"

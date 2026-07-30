@@ -13,7 +13,7 @@ import { OUTCOMES } from "../../content/outcomes";
 export function Outcomes() {
   return (
     <Section labelledBy="outcomes-heading">
-      <SectionHeader number="05" eyebrow="What changes" />
+      <SectionHeader eyebrow="What changes" />
 
       <MaskReveal
         id="outcomes-heading"

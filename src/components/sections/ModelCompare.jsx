@@ -23,7 +23,7 @@ export function ModelCompare() {
 
   return (
     <Section labelledBy="compare-heading">
-      <SectionHeader number="06" eyebrow="Before and after" />
+      <SectionHeader eyebrow="Before and after" />
 
       <MaskReveal
         id="compare-heading"

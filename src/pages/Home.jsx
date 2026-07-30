@@ -43,7 +43,7 @@ export default function Home() {
           <div className="h-px bg-ink-3" />
         </div>
       </div>
-      <CtaBand number="09" />
+      <CtaBand />
     </>
   );
 }

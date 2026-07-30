@@ -12,7 +12,7 @@ import { EXPERIENCE_BANDS, EXPERIENCE_CAPTION } from "../../content/principals";
 export function ExperienceBands() {
   return (
     <Section labelledBy="experience-heading" theme="paper-2">
-      <SectionHeader number="03" total="04" eyebrow="Where this comes from" />
+      <SectionHeader eyebrow="Where this comes from" />
 
       <MaskReveal
         id="experience-heading"

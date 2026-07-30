@@ -9,7 +9,7 @@ import { ENGAGEMENT_FORMATS } from "../../content/engagementFormats";
 export function EngagementFormats() {
   return (
     <Section labelledBy="formats-heading" theme="paper-2">
-      <SectionHeader number="05" total="07" eyebrow="How we engage" />
+      <SectionHeader eyebrow="How we engage" />
 
       <MaskReveal
         id="formats-heading"

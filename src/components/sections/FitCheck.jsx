@@ -77,7 +77,7 @@ export default function FitCheck() {
       className="on-ink bg-ink py-16 text-text-inv md:py-28"
     >
       <div className="mx-auto max-w-container px-6 md:px-12">
-        <SectionHeader number="08" eyebrow="Is this for you" theme="dark" />
+        <SectionHeader eyebrow="Is this for you" theme="dark" />
 
         <MaskReveal
           id="fit-heading"

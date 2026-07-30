@@ -20,7 +20,7 @@ export function CaseStudy({ study }) {
 
   return (
     <Section labelledBy="case-heading">
-      <SectionHeader number="02" total="04" eyebrow="Case study" />
+      <SectionHeader eyebrow="Case study" />
 
       <div className="mt-10 md:mt-14">
         <MaskReveal

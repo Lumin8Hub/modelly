@@ -18,8 +18,8 @@ export default function Services() {
         sub="You cannot write reliable controls without knowing what the systems can and cannot do. You cannot build a model that survives without both. Most firms sell one of the three. We work across all of them, because that is the only way the end result holds."
       />
 
-      {PILLARS.map((pillar, i) => (
-        <PillarDetail key={pillar.id} pillar={pillar} number={`0${i + 2}`} />
+      {PILLARS.map((pillar) => (
+        <PillarDetail key={pillar.id} pillar={pillar} />
       ))}
 
       <EngagementFormats />
