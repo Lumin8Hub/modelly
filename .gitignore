@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Internal planning material. This repository is public: the revision plan and
+# the completed client questionnaire contain revenue splits by service line,
+# unapproved performance metrics, trademark timing and notes on what must not be
+# published. They stay local.
+docs/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main", "devin/1777568999-modelly-fintech-site"]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:

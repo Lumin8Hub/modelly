@@ -1,0 +1,7 @@
+# Drop client-supplied raster sources here (PNG, JPEG, TIFF).
+#
+# `npm run build` runs scripts/convert-images.mjs first, which emits AVIF, WebP
+# and PNG into src/assets/. The script no-ops when this directory is empty.
+#
+# Naming: kebab-case, purpose first — hero-model.png, compare-before.png,
+# compare-after.png, principal-fabio.png. See 06-image-brief.md §11.
