@@ -1,14 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="64" height="64" role="img" aria-label="Modelly">
-  <!-- The connector mark, simplified for small sizes: three squares and the
-       connecting lines, no centre dots, ink on transparent. Stroke thickened to
-       6 so the squares still read as three distinct shapes at 16px.
-       See docs/revision-plan/06-image-brief.md §8. -->
-  <g stroke="#0B0C0E" stroke-width="6" fill="none" stroke-linecap="square">
-    <line x1="100" y1="100" x2="100" y2="52" />
-    <line x1="100" y1="100" x2="56" y2="144" />
-    <line x1="100" y1="100" x2="144" y2="144" />
-    <rect x="72" y="16" width="56" height="56" rx="12" />
-    <rect x="16" y="128" width="56" height="56" rx="12" />
-    <rect x="128" y="128" width="56" height="56" rx="12" />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Modelly">
+  <rect width="64" height="64" rx="14" fill="#0A0B0D"/>
+  <rect x="14" y="14" width="14" height="14" rx="4" fill="#5DB5AE"/>
+  <rect x="36" y="14" width="14" height="14" rx="4" fill="#F4C04E"/>
+  <rect x="25" y="36" width="14" height="14" rx="4" fill="#E5546B"/>
+  <path d="M28 21h8M42 28l-8 8M22 28l8 8" stroke="#F5F5F0" stroke-width="3" stroke-linecap="round"/>
 </svg>

@@ -2,22 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Variables exist for hand-written CSS only. Component styling goes through
-   the Tailwind tokens in tailwind.config.js — see 04-design-system.md §1.3. */
 :root {
-  --ink: #0b0c0e;
-  --ink-2: #16181c;
-  --ink-3: #22252a;
-  --paper: #fbfbf8;
-  --paper-2: #f1f1ec;
-  --rule: #e2e2dc;
-  --text: #0b0c0e;
-  --text-muted: #55554f;
-  --text-inv: #f5f5f0;
-  --signal: #0f766a;
-  --signal-bright: #5ec8bc;
-  --caution: #e0a32e;
-  --before: #c4453f;
+  --ink: #0a0b0d;
+  --ink-soft: #1a1c20;
+  --paper: #fafaf7;
+  --paper-elevated: #f2f2ee;
+  --rule: #e5e5e0;
+  --text-muted: #6b6b66;
+  --text-inverse: #f5f5f0;
+  --accent-teal: #5db5ae;
+  --accent-amber: #f4c04e;
+  --accent-coral: #e5546b;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -27,69 +22,20 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth scroll lives here, not in JS, so the reduced-motion block below can
-   reach it. Replaces the useEffect in the v1 App.jsx. See 05 §5. */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
 body {
   margin: 0;
   background-color: var(--paper);
-  color: var(--text);
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  font-size: 1.0625rem;
-  line-height: 1.6;
+  color: var(--ink);
 }
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
+button:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 2px;
-}
-
-/* Focus ring on dark surfaces needs the inverse colour to be visible. */
-.on-ink a:focus-visible,
-.on-ink button:focus-visible,
-.on-ink input:focus-visible,
-.on-ink textarea:focus-visible {
-  outline-color: var(--text-inv);
-}
-
-/* Range input used by ModelCompare: strip the native track, keep the thumb
-   operable. Styling detail in 05 §3.2. */
-input[type="range"].compare-input {
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-}
-
-input[type="range"].compare-input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 2.5rem;
-  height: 2.5rem;
-  cursor: ew-resize;
-  border-radius: 0;
-  background: transparent;
-}
-
-input[type="range"].compare-input::-moz-range-thumb {
-  width: 2.5rem;
-  height: 2.5rem;
-  cursor: ew-resize;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {
