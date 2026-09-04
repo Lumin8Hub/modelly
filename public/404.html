@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modelly</title>
+  </head>
+  <body>
+    <script>
+      (() => {
+        const prefixes = ["/modelly/v2/", "/modelly/"];
+        const base = prefixes
+          .filter((prefix) => location.pathname.startsWith(prefix))
+          .sort((a, b) => b.length - a.length)[0] || "/";
+        const path = location.pathname.slice(base.length) + location.search;
+        sessionStorage.setItem("redirectPath", path);
+        location.replace(base);
+      })();
+    </script>
+  </body>
+</html>
