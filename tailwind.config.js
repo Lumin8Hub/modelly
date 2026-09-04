@@ -14,6 +14,7 @@ export default {
         "accent-teal": "#5DB5AE",
         "accent-amber": "#F4C04E",
         "accent-coral": "#E5546B",
+        "accent-slate": "#5B7DB1",
       },
       fontFamily: {
         display: ["Fraunces", "serif"],
