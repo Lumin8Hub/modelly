@@ -23,5 +23,8 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Copy check
+        run: npm run check:copy
+
       - name: Build
         run: npm run build

@@ -17,7 +17,7 @@ Copy `.env.example` to `.env` when needed:
 - `VITE_PREVIEW` shows draft and placeholder badges when `true`.
 - `VITE_FORM_ENDPOINT` reserves the form endpoint for the selected form provider.
 
-Run `npm run dev` for local development, `npm run build` for the default build, and `npm run lint` for linting.
+Run `npm run dev` for local development, `npm run build` for the default build, `npm run lint` for linting, and `npm run check:copy` for the client copy rules.
 
 ## Cut-over
 
@@ -39,9 +39,10 @@ npm run dev
 
 ```bash
 npm run lint
+npm run check:copy
 npm run build
 ```
 
 ## Deployment
 
-GitHub Actions deploys the static Vite build to GitHub Pages on pushes to `main` using `.github/workflows/deploy.yml`.
+GitHub Actions deploys the static Vite build to GitHub Pages from `.github/workflows/deploy.yml`. It checks out `main` and builds v1 at `/modelly/`, checks out `v2` and builds v2 at `/modelly/v2/`, then assembles both into one Pages artifact.

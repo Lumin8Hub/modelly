@@ -19,4 +19,5 @@ export const meta = {
   "/get-started": { title: "Start with a diagnostic. — Modelly", description: "A few questions, about two minutes. One of us reads every answer." },
   "/privacy": { title: "Privacy policy — Modelly", description: "Modelly privacy policy." },
   "/terms": { title: "Terms of use — Modelly", description: "Modelly terms of use." },
+  "/404": { title: "That page does not exist. — Modelly", description: "The link may be out of date. Everything is one click away." },
 };
