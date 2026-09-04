@@ -1,6 +1,6 @@
 export const pillars = [
   {
-    slug: "enterprise-systems", to: "/pillars/enterprise-systems", name: "Enterprise Systems", eyebrow: "OUR PILLARS — ENTERPRISE SYSTEMS",
+    slug: "enterprise-systems", to: "/pillars/enterprise-systems", name: "Enterprise Systems", variant: "grid", eyebrow: "OUR PILLARS — ENTERPRISE SYSTEMS",
     breadcrumb: [{ label: "Home", to: "/" }, { label: "Our Pillars", to: "/#pillars" }],
     h1: "Where your numbers come from.",
     body: "Every report rests on systems that were bought for something else. An ERP built for transactions. A CRM built for pipeline. A warehouse built for storage. Between them sit the spreadsheets your team wrote to make the handoffs work. That is usually where the reporting breaks.",
@@ -11,7 +11,7 @@ export const pillars = [
     teaser: { title: "Enterprise Systems", tagline: "Where your numbers come from.", body: "The ERP, the CRM, the performance management tool, the data warehouse, and the spreadsheets filling the gaps between them. We find where the data breaks on the way to your report, and fix the handoffs." },
   },
   {
-    slug: "accounting-processes", to: "/pillars/accounting-processes", name: "Accounting Processes", eyebrow: "OUR PILLARS — ACCOUNTING PROCESSES",
+    slug: "accounting-processes", to: "/pillars/accounting-processes", name: "Accounting Processes", variant: "table", eyebrow: "OUR PILLARS — ACCOUNTING PROCESSES",
     breadcrumb: [{ label: "Home", to: "/" }, { label: "Our Pillars", to: "/#pillars" }],
     h1: "How data becomes numbers you trust.",
     body: "The close is a process, not an event. So is reconciliation, so is reporting. Most of them grew by accretion, one workaround at a time, until nobody can say what the whole thing looks like. We map it, then remove the parts that only exist because of a limitation somewhere else.",
@@ -22,7 +22,7 @@ export const pillars = [
     teaser: { title: "Accounting Processes", tagline: "How data becomes numbers you trust.", body: "How the close, the reconciliations and the reporting actually run today. We map the steps, remove the manual ones, and make it clear who owns what." },
   },
   {
-    slug: "modern-governance", to: "/pillars/modern-governance", name: "Modern Governance", eyebrow: "OUR PILLARS — MODERN GOVERNANCE",
+    slug: "modern-governance", to: "/pillars/modern-governance", name: "Modern Governance", variant: "flow", eyebrow: "OUR PILLARS — MODERN GOVERNANCE",
     breadcrumb: [{ label: "Home", to: "/" }, { label: "Our Pillars", to: "/#pillars" }],
     h1: "Models that keep working after we leave.",
     body: "A model is not a deliverable, it is an instrument someone has to operate for years. Most fail for the same two reasons: only the author understands the structure, and every change means a rebuild. We build for the opposite. One workbook, one structure, and a method your team can extend.",
@@ -34,7 +34,7 @@ export const pillars = [
     teaser: { title: "Modern Governance", tagline: "Models that keep working after we leave.", body: "One workbook. Every scenario and every period on a single sheet, built from native features. Nothing for IT to block, and nothing that stops working when one person leaves." },
   },
   {
-    slug: "ai", to: "/pillars/ai", name: "AI", eyebrow: "OUR PILLARS — AI", draft: true,
+    slug: "ai", to: "/pillars/ai", name: "AI", variant: "line", eyebrow: "OUR PILLARS — AI", draft: true,
     breadcrumb: [{ label: "Home", to: "/" }, { label: "Our Pillars", to: "/#pillars" }],
     h1: "AI, used narrowly and well.",
     body: "AI is useful here in a narrow and unglamorous way. It can draft the documentation nobody wants to write, read a process and flag the missing steps, and notice when a model's assumptions have drifted from what the business is actually doing. We set it up as an assistant to your team, inside the tools you already license.",

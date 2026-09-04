@@ -1,5 +1,6 @@
 const base = [{ label: "Home", to: "/" }, { label: "The Toolkit", to: "/#toolkit" }];
-const make = (slug, name, lede, body, list, engagement, draft = false) => ({ slug, to: `/models/${slug}`, name, eyebrow: `THE TOOLKIT — ${name.toUpperCase()}`, breadcrumb: [...base], h1: name, lede, body, draft, sections: [{ h2: "What's inside", list }, { h2: "On your engagement", body: engagement }] });
+const variants = ["bars", "line", "grid", "waterfall", "table", "flow"];
+const make = (slug, name, lede, body, list, engagement, draft = false) => ({ slug, to: `/models/${slug}`, name, variant: variants[slug.length % variants.length], eyebrow: `THE TOOLKIT — ${name.toUpperCase()}`, breadcrumb: [...base], h1: name, lede, body, draft, sections: [{ h2: "What's inside", list }, { h2: "On your engagement", body: engagement }] });
 
 export const models = [
   make("charter", "Charter", "Agreed before anything gets built.", "The kickoff document: purpose, scope, goals, stakeholders and ground rules, agreed in writing before work starts. It is also what we point at when scope starts moving.", ["Purpose and objectives, in plain language", "Scope — what is in, and just as clearly, what is out", "Stakeholders, roles and ground rules", "Meeting cadence and ways of working", "What done looks like, agreed up front"], "Every Modelly engagement opens with a charter. It takes one session to agree and saves weeks of drift. Yours to keep and reuse on any project, not only ours."),
