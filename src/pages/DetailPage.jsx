@@ -1,0 +1,10 @@
+import { PageHeader } from "../components/sections/PageHeader";
+import { CtaBand } from "../components/sections/CtaBand";
+import { Comparison } from "../components/sections/Comparison";
+import { DraftBadge } from "../components/ui/DraftBadge";
+import { Reveal } from "../components/ui/Reveal";
+import { ModelPlaceholder } from "../components/graphics/ModelPlaceholder";
+
+export function DetailPage({ page }) {
+  return <div><PageHeader breadcrumb={page.breadcrumb} eyebrow={page.eyebrow} title={page.h1} lede={page.lede} body={page.body} seed={page.slug.length} draft={page.draft} /><div className="mx-auto max-w-[72ch] px-5 py-16 md:py-24">{page.sections.map((section, index) => <Reveal key={section.h2} delay={index * .05}><section className="mb-14"><h2 className="font-display text-3xl leading-tight md:text-4xl">{section.h2}{section.draft && <DraftBadge />}</h2>{section.body && <p className="mt-5 text-base leading-7 text-text-muted">{section.body}</p>}{section.list && <ul className="mt-5 grid gap-4 text-base leading-7">{section.list.map((item) => <li key={item} className="flex gap-3"><span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-teal" />{item}</li>)}</ul>}{section.comparison && <Comparison />}</section></Reveal>)}{page.callout && <aside className="mb-14 border-l-4 border-ink bg-paper-elevated p-6 font-display text-2xl font-light italic leading-tight">{page.callout}</aside>}{page.slug === "rascix" && <div className="mb-14"><DraftBadge label="OPEN — what the X and + denote" /></div>}{page.closing && <p className="mb-14 font-display text-2xl font-light italic leading-tight text-text-muted">{page.closing}</p>}{page.slug === "modern-governance" && <div className="mb-14 grid gap-4 sm:grid-cols-2"><div><ModelPlaceholder seed={3} /><p className="mt-2 font-mono text-xs uppercase text-text-muted">Before <DraftBadge label="PLACEHOLDER" /></p></div><div><ModelPlaceholder seed={4} /><p className="mt-2 font-mono text-xs uppercase text-text-muted">After <DraftBadge label="PLACEHOLDER" /></p></div></div>}</div><CtaBand /></div>;
+}
