@@ -1,6 +1,7 @@
 import { CtaBand } from "../components/sections/CtaBand";
 import { PageHeader } from "../components/sections/PageHeader";
 import { DraftBadge } from "../components/ui/DraftBadge";
+import { images } from "../content/images";
 
 const sections = [
   ["Using this site", "You may use this site for lawful, personal or internal business purposes. Please do not interfere with the site or use its content in a way that misleads others."],
@@ -13,7 +14,7 @@ const sections = [
 
 export function Terms() {
   return <div>
-    <PageHeader breadcrumb={[{ label: "Home", to: "/" }]} breadcrumbLabel="Terms of use" eyebrow="TERMS" title="Terms of use" body="A plain-language draft for client approval." variant="waterfall" seed={17}><DraftBadge always label="DRAFT — client approval required" /></PageHeader>
+    <PageHeader breadcrumb={[{ label: "Home", to: "/" }]} breadcrumbLabel="Terms of use" eyebrow="TERMS" title="Terms of use" body="A plain-language draft for client approval." image={images.terms}><DraftBadge always label="DRAFT — client approval required" /></PageHeader>
     <section className="mx-auto max-w-[72ch] px-5 py-16 md:py-24">{sections.map(([heading, body]) => <section key={heading} className="mb-10"><h2 className="font-display text-3xl">{heading}</h2><p className="mt-4 text-base leading-7 text-text-muted">{body}</p></section>)}</section>
     <CtaBand />
   </div>;
