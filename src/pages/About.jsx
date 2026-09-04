@@ -2,6 +2,7 @@ import { CtaBand } from "../components/sections/CtaBand";
 import { PageHeader } from "../components/sections/PageHeader";
 import { DraftBadge } from "../components/ui/DraftBadge";
 import { Monogram } from "../components/ui/Monogram";
+import { images } from "../content/images";
 
 const profiles = [
   {
@@ -26,7 +27,7 @@ const profiles = [
 
 export function About() {
   return <div>
-    <PageHeader breadcrumb={[{ label: "Home", to: "/" }]} breadcrumbLabel="About Us" eyebrow="ABOUT US" title="The people who sell you the work are the people who do it." body="Three principals. Forty years between them running finance, reporting and operations inside large businesses. No junior bench, no handoff, no implementation partner in the middle." variant="flow" seed={7}>
+    <PageHeader breadcrumb={[{ label: "Home", to: "/" }]} breadcrumbLabel="About Us" eyebrow="ABOUT US" title="The people who sell you the work are the people who do it." body="Three principals. Forty years between them running finance, reporting and operations inside large businesses. No junior bench, no handoff, no implementation partner in the middle." image={images.about}>
       <p className="mt-6 max-w-[58ch] text-lg leading-7 text-text-muted">Most firms separate the two. A partner wins the engagement, a junior team builds it, and an implementation partner delivers it. Often nobody in that chain has run a finance function. We built Modelly to work the other way: every engagement is designed and built by the people you met. Modelly is young; the experience behind it is not — and you get senior attention partly because we are not running forty engagements at once.</p>
     </PageHeader>
     <section className="mx-auto max-w-container px-5 py-16 md:px-10 md:py-24">

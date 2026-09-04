@@ -1,7 +1,7 @@
 import { DraftBadge } from "../ui/DraftBadge";
 
-export function ModelPlaceholder({ variant = "hero", seed = 1, image, className = "" }) {
-  if (image) return <img src={image} alt="" className={`w-full border border-rule object-cover shadow-sm ${className}`} />;
+export function ModelPlaceholder({ variant = "hero", seed = 1, image, alt = "", priority = false, className = "" }) {
+  if (image) return <img src={image} alt={alt} loading={priority ? "eager" : "lazy"} decoding="async" className={`w-full border border-rule bg-white object-contain shadow-sm ${className}`} />;
   const accent = ["#5DB5AE", "#F4C04E", "#E5546B", "#5B7DB1"][seed % 4];
   const chart = variant === "line"
     ? "M12 92 C45 65 55 81 84 45 S130 64 163 28 S210 40 238 15"
