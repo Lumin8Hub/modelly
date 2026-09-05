@@ -9,13 +9,26 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
+  # The github-pages environment only allows deployments from main, so a push
+  # to v2 re-dispatches this workflow on main (which builds both branches).
+  redispatch:
+    if: github.ref_name != 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh workflow run deploy.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+
   build:
+    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout v1
