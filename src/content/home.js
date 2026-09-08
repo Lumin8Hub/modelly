@@ -5,7 +5,6 @@ export const home = {
     eyebrow: "PLANNING · FORECASTING · REPORTING · PROCESS",
     title: "Less time producing information.\nMore time using it.",
     body: "Most finance teams spend about 80% of their week preparing information and 20% acting on it. We build the planning, forecasting and reporting systems that flip that ratio, using the Microsoft 365 or Google Workspace tools your team already has.",
-    trust: "Two CPAs and a marketing lead. Forty years in finance between them. The people who sell you the work are the people who do it.",
   },
   outcomes: [
     {

@@ -26,5 +26,8 @@ jobs:
       - name: Copy check
         run: npm run check:copy
 
+      - name: Route check
+        run: npm run check:routes
+
       - name: Build
         run: npm run build

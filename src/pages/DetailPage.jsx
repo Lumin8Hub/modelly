@@ -1,11 +1,22 @@
-import { PageHeader } from "../components/sections/PageHeader";
 import { CtaBand } from "../components/sections/CtaBand";
-import { Comparison } from "../components/sections/Comparison";
+import { PageHeader } from "../components/sections/PageHeader";
+import { ReviewImage } from "../components/ui/ReviewImage";
 import { DraftBadge } from "../components/ui/DraftBadge";
-import { Reveal } from "../components/ui/Reveal";
-import { ModelPlaceholder } from "../components/graphics/ModelPlaceholder";
 import { images } from "../content/images";
 
-export function DetailPage({ page }) {
-  return <div><PageHeader breadcrumb={page.breadcrumb} breadcrumbLabel={page.name} eyebrow={page.eyebrow} title={page.h1} lede={page.lede} body={page.body} seed={page.slug.length} variant={page.variant} image={images[page.slug]} draft={page.draft} /><div className="mx-auto max-w-[72ch] px-5 py-16 md:py-24">{page.sections.map((section, index) => <Reveal key={section.h2} delay={index * .05}><section className="mb-14"><h2 className="font-display text-3xl leading-tight md:text-4xl">{section.h2}{section.draft && <DraftBadge />}</h2>{section.body && <p className="mt-5 text-base leading-7 text-text-muted">{section.body}</p>}{section.list && <ul className="mt-5 grid gap-4 text-base leading-7">{section.list.map((item) => <li key={item} className="flex gap-3"><span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-teal" />{item}</li>)}</ul>}{section.comparison && <Comparison />}</section></Reveal>)}{page.callout && <aside className="mb-14 border-l-4 border-ink bg-paper-elevated p-6 font-display text-2xl font-light italic leading-tight">{page.callout}</aside>}{page.slug === "rascix" && <div className="mb-14"><DraftBadge label="OPEN — what the X and + denote" /></div>}{page.closing && <p className="mb-14 font-display text-2xl font-light italic leading-tight text-text-muted">{page.closing}</p>}{page.slug === "modern-governance" && <div className="mb-14 grid gap-4 sm:grid-cols-2"><div><ModelPlaceholder image={images["modern-governance-before"].src} alt={images["modern-governance-before"].alt} /><p className="mt-2 font-mono text-xs uppercase text-text-muted">Before <DraftBadge label="ILLUSTRATIVE" /></p></div><div><ModelPlaceholder image={images["modern-governance-after"].src} alt={images["modern-governance-after"].alt} /><p className="mt-2 font-mono text-xs uppercase text-text-muted">After <DraftBadge label="ILLUSTRATIVE" /></p></div></div>}</div><CtaBand /></div>;
+const imageOnLeft = new Set(["modern-governance", "ai"]);
+
+function BulletList({ bullets }) {
+  return <ul className="mt-6 grid gap-3 text-base leading-[1.65] md:text-lg">{bullets.map((item) => <li key={item} className="flex gap-3"><span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-teal" />{item}</li>)}</ul>;
+}
+
+export function DetailPage({ page, kind = "pillar" }) {
+  const isPillar = kind === "pillar";
+  const image = images[page.image || page.slug];
+  return <div>
+    <PageHeader breadcrumb={page.breadcrumb} breadcrumbLabel={page.name} eyebrow={page.eyebrow} title={page.h1 || page.name} body={isPillar ? page.body : undefined} image={images[page.slug]} draft={page.draft} />
+    {isPillar ? <section className="mx-auto grid max-w-container gap-6 px-5 py-12 md:grid-cols-2 md:gap-12 md:px-10 md:py-20"><div className={imageOnLeft.has(page.slug) ? "order-1 md:order-2" : "order-1 md:order-1"}><h2 className="font-display text-[30px] leading-[1.2] md:text-[40px]">What this involves{page.draft && <DraftBadge label="DRAFT — awaiting Lumin8 approval" />}</h2><BulletList bullets={page.bullets} /></div><div className={imageOnLeft.has(page.slug) ? "order-2 md:order-1" : "order-2 md:order-2"}><ReviewImage image={image} /></div></section> : <section className="mx-auto max-w-[720px] px-5 py-12 md:px-10 md:py-20"><ReviewImage image={image} /><div className="mt-10"><h2 className="font-display text-[30px] leading-[1.2] md:text-[40px]">What's inside</h2><BulletList bullets={page.bullets} />{page.slug === "rascix" && <div className="mt-8"><DraftBadge label="OPEN — Lumin8 must confirm the meaning of X and +." always /></div>}</div></section>}
+    {page.callout && <aside className="mx-auto mb-12 max-w-container px-5 md:mb-20 md:px-10"><div className="border-l-4 border-accent-coral bg-paper-elevated p-6 font-display text-2xl font-light italic leading-tight">{page.callout}</div></aside>}
+    <CtaBand />
+  </div>;
 }
