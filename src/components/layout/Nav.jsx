@@ -49,7 +49,7 @@ export function Nav() {
   return <header className="sticky top-0 z-40 border-b border-rule bg-paper/95 backdrop-blur">
     <div className="mx-auto flex max-w-container items-center justify-between px-5 md:px-10">
       <Logo />
-      <nav className="hidden items-center gap-3 xl:flex" aria-label="Main navigation">
+      <nav className="hidden items-center gap-5 xl:flex" aria-label="Main navigation">
         {nav.map((item) => item.children ? <NavGroup key={item.label} item={item} /> : item.cta ? <Button key={item.to} to={item.to} className="ml-1">{item.label}</Button> : <NavLink key={item.to} to={item.to} className={({ isActive }) => `inline-flex min-h-11 items-center px-2 text-[13px] leading-5 ${isActive ? "font-semibold text-ink" : "text-text-muted hover:text-ink"}`}>{item.label}</NavLink>)}
       </nav>
       <button type="button" className="inline-flex min-h-11 items-center gap-2 px-2 text-sm font-semibold text-ink xl:hidden" aria-label={mobileOpen ? "Close menu" : "Open menu"} aria-expanded={mobileOpen} onClick={() => setMobileOpen((value) => !value)}>{mobileOpen ? <X size={19} aria-hidden="true" /> : <MenuIcon size={19} aria-hidden="true" />}<span>Menu</span></button>
