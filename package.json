@@ -5,8 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/check-release.mjs",
     "build": "vite build",
     "lint": "eslint .",
+    "check:copy": "node scripts/check-copy.mjs",
+    "check:routes": "node scripts/check-routes.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -16,7 +19,8 @@
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.14.0",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^7.18.3"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

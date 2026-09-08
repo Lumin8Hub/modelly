@@ -4,16 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#0A0B0D",
-        "ink-soft": "#1A1C20",
-        paper: "#FAFAF7",
-        "paper-elevated": "#F2F2EE",
-        rule: "#E5E5E0",
-        "text-muted": "#6B6B66",
-        "text-inverse": "#F5F5F0",
-        "accent-teal": "#5DB5AE",
-        "accent-amber": "#F4C04E",
-        "accent-coral": "#E5546B",
+        ink: "#1C2A35",
+        "ink-soft": "#1C2A35",
+        paper: "#F5F7F9",
+        "paper-elevated": "#FFFFFF",
+        rule: "rgba(28, 42, 53, 0.18)",
+        "text-muted": "#356B87",
+        "text-inverse": "#FFFFFF",
+        "accent-teal": "#12AD8E",
+        "accent-amber": "#DDAC4A",
+        "accent-coral": "#C04040",
+        "accent-slate": "#356B87",
       },
       fontFamily: {
         display: ["Fraunces", "serif"],
